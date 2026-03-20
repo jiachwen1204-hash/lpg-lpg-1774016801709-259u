@@ -25,9 +25,9 @@ const CONTENT = {
     { value: '10M+', label: 'Workflows Automated' },
   ] satisfies StatItem[],
   values: [
-    { title: 'Integration First', desc: 'Seamlessly connects with your existing tools and workflows' },
-    { title: 'Privacy by Design', desc: 'Enterprise-grade security with complete data sovereignty' },
-    { title: 'Scalable Intelligence', desc: 'Grows with your business from startup to enterprise' },
+    { icon: '🔗', title: 'Integration First', desc: 'Seamlessly connects with your existing tools and workflows' },
+    { icon: '🔒', title: 'Privacy by Design', desc: 'Enterprise-grade security with complete data sovereignty' },
+    { icon: '📈', title: 'Scalable Intelligence', desc: 'Grows with your business from startup to enterprise' },
   ] satisfies ValueItem[],
   cta: { label: 'Start Free Trial', href: '#contact' },
 }
