@@ -17,7 +17,7 @@ const CONTENT = {
   heading: 'Unified AI. Unlimited Potential.',
   paragraphs: [
     'We provide integrated AI solutions that unify automation, analytics, and intelligent workflows into a centralized platform. Our technology empowers organizations to enhance efficiency, optimize decision-making, and drive scalable digital innovation.',
-    'At Meh Ai, we believe that artificial intelligence should simplify complexity — not create it. Our team combines deep technical expertise with a commitment to delivering solutions that actually work for your business.',
+    'At Apex, we believe that artificial intelligence should simplify complexity — not create it. Our team combines deep technical expertise with a commitment to delivering solutions that actually work for your business.',
   ],
   stats: [
     { value: '99.9%', label: 'Platform Uptime' },
@@ -36,7 +36,7 @@ export default function About() {
   return (
     <section id="about" className="relative py-section overflow-hidden">
       {/* Background layers */}
-      <div className="absolute inset-0 bg-[#080810]" />
+      <div className="absolute inset-0 bg-neutral-950" />
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
         backgroundRepeat: 'repeat',
@@ -61,7 +61,7 @@ export default function About() {
             </h2>
           </AnimateIn>
           <AnimateIn delay={200}>
-            <p className="text-lg text-white/60 leading-relaxed font-light">
+            <p className="font-body text-lg text-white/60 leading-relaxed">
               {CONTENT.paragraphs[0]}
             </p>
           </AnimateIn>
@@ -76,7 +76,7 @@ export default function About() {
                 <div className="font-heading font-black text-[clamp(2.5rem,4vw,3.5rem)] text-white leading-none mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-white/50 font-medium">
+                <div className="font-body text-sm text-white/50">
                   {stat.label}
                 </div>
               </div>
@@ -97,21 +97,21 @@ export default function About() {
                 <h3 className="font-heading font-bold text-display-md text-white mb-6">
                   Our Story
                 </h3>
-                <p className="text-content-secondary leading-relaxed mb-4">
+                <p className="font-body text-white/60 leading-relaxed mb-4">
                   {CONTENT.paragraphs[1]}
                 </p>
-                <p className="text-content-secondary leading-relaxed">
-                  From our office in Bandar Sungai Long, we serve organizations worldwide, helping them harness the power of AI to transform how they work, decide, and grow.
+                <p className="font-body text-white/60 leading-relaxed">
+                  From our office in Kuala Lumpur, we serve organizations worldwide, helping them harness the power of AI to transform how they work, decide, and grow.
                 </p>
 
                 {/* Address */}
                 <div className="mt-8 p-4 rounded-card-lg border border-white/10 bg-white/[0.02]">
-                  <div className="text-xs text-white/40 uppercase tracking-wider mb-2">Headquarters</div>
-                  <div className="text-sm text-white/70">
+                  <div className="font-body text-xs text-white/40 uppercase tracking-wider mb-2">Headquarters</div>
+                  <div className="font-body text-sm text-white/70">
                     B5-1-3, Forest Green Condominium<br />
-                    Bandar Sungai Long
+                    Bandar Sungai Long, Selangor
                   </div>
-                  <a href="mailto:dev@apex.ms" className="inline-flex items-center gap-1.5 mt-2 text-sm text-brand-400 hover:text-brand-300 transition-colors">
+                  <a href="mailto:dev@apex.ms" className="inline-flex items-center gap-1.5 mt-2 font-body text-sm text-brand-400 hover:text-brand-300 transition-colors duration-200">
                     dev@apex.ms
                   </a>
                 </div>
@@ -133,16 +133,16 @@ export default function About() {
                   {CONTENT.values.map((value, i) => (
                     <div key={value.title} className="relative group">
                       <div className="absolute inset-0 bg-brand-500/0 group-hover:bg-brand-500/[0.03] rounded-card transition-all duration-300" />
-                      <div className="relative p-5 rounded-card-lg border border-white/10 bg-white/[0.02] hover:border-brand-500/30 transition-all">
+                      <div className="relative p-5 rounded-card-lg border border-white/10 bg-white/[0.02] hover:border-brand-500/30 transition-all duration-300">
                         <div className="flex items-start gap-4">
                           <div className="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center shrink-0">
-                            <span className="text-lg font-bold text-brand-400">0{i + 1}</span>
+                            <span className="font-heading text-lg font-bold text-brand-400">0{i + 1}</span>
                           </div>
                           <div>
                             <h4 className="font-heading font-semibold text-white mb-1">
                               {value.title}
                             </h4>
-                            <p className="text-sm text-white/50">
+                            <p className="font-body text-sm text-white/50">
                               {value.desc}
                             </p>
                           </div>
@@ -157,10 +157,10 @@ export default function About() {
                   <div className="absolute inset-0 bg-brand-500/30 blur-xl rounded-pill scale-110" />
                   <a
                     href={CONTENT.cta.href}
-                    className="relative inline-flex items-center gap-2 px-8 py-4 font-body font-semibold bg-brand-500 text-white rounded-pill hover:bg-brand-700 transition-all duration-300 shadow-glow"
+                    className="relative inline-flex items-center gap-2 px-8 py-4 font-body font-semibold bg-brand-500 text-white rounded-pill hover:bg-brand-700 transition-all duration-300 shadow-glow hover:shadow-glow-lg hover:scale-105"
                   >
                     {CONTENT.cta.label}
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </a>

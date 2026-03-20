@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden bg-[#0f0f13] pt-nav"
+      className="relative min-h-screen flex items-center overflow-hidden bg-background pt-nav"
     >
       {/* Background depth layers */}
       <div className="absolute inset-0">
@@ -36,7 +36,7 @@ export default function Hero() {
         <div
           className="absolute inset-0 opacity-[0.18] pointer-events-none"
           style={{
-            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(circle, rgb(255 255 255 / 0.12) 1px, transparent 1px)',
             backgroundSize: '40px 40px',
             maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent)',
           }}
@@ -55,7 +55,7 @@ export default function Hero() {
         {/* Radial gradient fade */}
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 40%, transparent 40%, #0f0f13 100%)' }}
+          style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 40%, transparent 40%, var(--background) 100%)' }}
         />
       </div>
 

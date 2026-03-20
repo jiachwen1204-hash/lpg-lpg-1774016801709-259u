@@ -36,7 +36,7 @@ const CONTENT = {
 
 export default function SocialProof() {
   return (
-    <section className="relative py-section overflow-hidden bg-[#0f0f13]">
+    <section className="relative py-section overflow-hidden bg-[var(--brand-500)]">
       {/* Ambient glow orbs */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-sky-500/[0.06] blur-[160px] pointer-events-none" />
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-indigo-500/[0.05] blur-[140px] pointer-events-none" />
@@ -52,7 +52,7 @@ export default function SocialProof() {
 
       <div className="relative max-w-7xl mx-auto px-6">
         <AnimateIn className="text-center mb-16">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-pill bg-sky-500/10 border border-sky-500/20 text-sky-400 text-sm font-medium mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-pill bg-sky-500/10 border border-sky-500/20 text-sky-400 text-sm font-body mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
             {CONTENT.badge}
           </span>
@@ -60,13 +60,13 @@ export default function SocialProof() {
 
         {/* Client logos marquee */}
         <div className="relative mb-24 overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0f0f13] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0f0f13] to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[var(--brand-500)] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[var(--brand-500)] to-transparent z-10 pointer-events-none" />
           <div className="flex gap-8 animate-marquee w-max">
             {[...CONTENT.clients, ...CONTENT.clients].map((name, i) => (
               <div
                 key={i}
-                className="whitespace-nowrap px-6 py-3.5 rounded-card border border-white/[0.06] bg-white/[0.02] text-white/50 font-medium text-sm hover:border-sky-500/30 hover:text-white/70 hover:bg-white/[0.04] transition-all duration-300 cursor-default"
+                className="whitespace-nowrap px-6 py-3.5 rounded-card border border-white/[0.06] bg-white/[0.02] text-white/50 font-body text-sm hover:border-sky-500/30 hover:text-white/70 hover:bg-white/[0.04] transition-all duration-300 cursor-default"
               >
                 {name}
               </div>
@@ -93,20 +93,20 @@ export default function SocialProof() {
                     </svg>
                   </div>
 
-                  <p className="text-white/80 leading-relaxed mb-6 text-lg font-light">
+                  <p className="text-white/80 leading-relaxed mb-6 text-lg font-body">
                     &ldquo;{t.quote}&rdquo;
                   </p>
 
                   <div className="flex items-center gap-4">
                     {/* Avatar placeholder */}
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-sky-500/30 to-indigo-500/20 border border-sky-500/30 flex items-center justify-center">
-                      <span className="text-sky-400 font-semibold text-lg">
+                      <span className="text-sky-400 font-heading font-semibold text-lg">
                         {t.author.split(' ').map(n => n[0]).join('')}
                       </span>
                     </div>
                     <div>
-                      <div className="font-semibold text-white">{t.author}</div>
-                      <div className="text-sm text-white/40">{t.role}</div>
+                      <div className="font-heading font-semibold text-white">{t.author}</div>
+                      <div className="text-sm text-white/40 font-body">{t.role}</div>
                     </div>
                   </div>
                 </div>
@@ -129,7 +129,7 @@ export default function SocialProof() {
                   <div className="font-heading font-bold text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400 mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-white/40 font-medium">{stat.label}</div>
+                  <div className="text-sm text-white/40 font-body">{stat.label}</div>
                 </div>
               ))}
             </div>

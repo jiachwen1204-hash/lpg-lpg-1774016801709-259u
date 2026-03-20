@@ -24,14 +24,14 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#0f172a]">
+    <footer className="bg-[var(--brand-900)]">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <Link
               href="/"
-              className="inline-flex items-center gap-3 font-heading font-bold text-xl text-white hover:text-sky-400 transition-colors"
+              className="inline-flex items-center gap-3 font-heading font-bold text-xl text-white hover:text-[var(--brand-400)] transition-colors duration-200"
             >
               <img
                 src="https://u5ft5besqtymo1lf.public.blob.vercel-storage.com/logos/1774016800184-ai-artificial-intelligence-improves-emai-600nw-2655586379.webp"
@@ -51,7 +51,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {navLinks.map(l => (
                 <li key={l.href}>
-                  <a href={l.href} className="text-sm text-white/50 hover:text-sky-400 transition-colors">
+                  <a href={l.href} className="text-sm text-white/50 hover:text-[var(--brand-400)] transition-colors duration-200">
                     {l.label}
                   </a>
                 </li>
@@ -65,7 +65,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {legal.map(l => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-sm text-white/50 hover:text-sky-400 transition-colors">
+                  <Link href={l.href} className="text-sm text-white/50 hover:text-[var(--brand-400)] transition-colors duration-200">
                     {l.label}
                   </Link>
                 </li>
@@ -76,7 +76,7 @@ export default function Footer() {
               <div className="space-y-3">
                 <a
                   href={`mailto:${BRAND.email}`}
-                  className="flex items-center gap-2 text-sm text-white/50 hover:text-sky-400 transition-colors"
+                  className="flex items-center gap-2 text-sm text-white/50 hover:text-[var(--brand-400)] transition-colors duration-200"
                 >
                   <Mail className="w-4 h-4" />
                   {BRAND.email}
@@ -95,7 +95,7 @@ export default function Footer() {
             © {year} {BRAND.name}. All rights reserved.
           </p>
           <p className="text-sm text-white/40">
-            Unified AI. Unlimited Potential.
+            {BRAND.tagline}
           </p>
         </div>
       </div>

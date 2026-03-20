@@ -41,13 +41,13 @@ export default function Services() {
     <section id="services" className="py-section bg-surface">
       <div className="max-w-7xl mx-auto px-6">
         <AnimateIn className="text-center mb-16">
-          <p className="text-sm font-medium tracking-widest uppercase text-brand-500 mb-3">
+          <p className="text-sm font-medium tracking-widest uppercase text-brand-500 mb-3 font-body">
             {CONTENT.badge}
           </p>
           <h2 className="font-heading font-black text-display-lg text-content-primary mb-4">
             {CONTENT.heading}
           </h2>
-          <p className="max-w-2xl mx-auto text-content-secondary">{CONTENT.subtext}</p>
+          <p className="max-w-2xl mx-auto text-content-secondary font-body">{CONTENT.subtext}</p>
         </AnimateIn>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -63,7 +63,7 @@ export default function Services() {
                   <h3 className="font-heading font-bold text-xl text-content-primary mb-3">
                     {svc.title}
                   </h3>
-                  <p className="text-content-secondary leading-relaxed text-sm">{svc.description}</p>
+                  <p className="text-content-secondary leading-relaxed text-sm font-body">{svc.description}</p>
                 </div>
               </div>
             </AnimateIn>

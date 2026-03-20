@@ -78,7 +78,7 @@ export default function Stats() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-500/[0.06] blur-[180px]" />
         <div className="absolute inset-0 opacity-[0.15]"
           style={{
-            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(circle, var(--color-white-12) 1px, transparent 1px)',
             backgroundSize: '32px 32px',
           }}
         />
